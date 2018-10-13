@@ -1,0 +1,5 @@
+1.116
+perl(Class::Inspector)
+perl(File::ShareDir::Install)
+perl(List::MoreUtils)
+perl(Params::Util)
