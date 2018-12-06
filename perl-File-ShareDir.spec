@@ -82,10 +82,10 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1File/ShareDir.pm
-/usr/lib/perl5/vendor_perl/5.28.1auto/share/dist/File-ShareDir/sample.txt
-/usr/lib/perl5/vendor_perl/5.28.1auto/share/dist/File-ShareDir/subdir/sample.txt
-/usr/lib/perl5/vendor_perl/5.28.1auto/share/module/File-ShareDir/test_file.txt
+/usr/lib/perl5/vendor_perl/5.28.1/File/ShareDir.pm
+/usr/lib/perl5/vendor_perl/5.28.1/auto/share/dist/File-ShareDir/sample.txt
+/usr/lib/perl5/vendor_perl/5.28.1/auto/share/dist/File-ShareDir/subdir/sample.txt
+/usr/lib/perl5/vendor_perl/5.28.1/auto/share/module/File-ShareDir/test_file.txt
 
 %files dev
 %defattr(-,root,root,-)
