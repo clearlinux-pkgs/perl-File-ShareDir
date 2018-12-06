@@ -4,7 +4,7 @@
 #
 Name     : perl-File-ShareDir
 Version  : 1.116
-Release  : 9
+Release  : 10
 URL      : http://search.cpan.org/CPAN/authors/id/R/RE/REHSACK/File-ShareDir-1.116.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/R/RE/REHSACK/File-ShareDir-1.116.tar.gz
 Summary  : 'Locate per-dist and per-module shared files'
