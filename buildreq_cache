@@ -1,5 +1,6 @@
 1.116
 perl(Class::Inspector)
+perl(Exporter::Tiny)
 perl(File::ShareDir::Install)
 perl(List::MoreUtils)
 perl(Params::Util)

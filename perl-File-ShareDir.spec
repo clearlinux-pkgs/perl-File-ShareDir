@@ -4,15 +4,17 @@
 #
 Name     : perl-File-ShareDir
 Version  : 1.116
-Release  : 14
+Release  : 15
 URL      : http://search.cpan.org/CPAN/authors/id/R/RE/REHSACK/File-ShareDir-1.116.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/R/RE/REHSACK/File-ShareDir-1.116.tar.gz
 Summary  : 'Locate per-dist and per-module shared files'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-File-ShareDir-license = %{version}-%{release}
+Requires: perl(Class::Inspector)
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Class::Inspector)
+BuildRequires : perl(Exporter::Tiny)
 BuildRequires : perl(File::ShareDir::Install)
 BuildRequires : perl(List::MoreUtils)
 BuildRequires : perl(Params::Util)
@@ -30,6 +32,7 @@ File::ShareDir - Locate per-dist and per-module shared files
 Summary: dev components for the perl-File-ShareDir package.
 Group: Development
 Provides: perl-File-ShareDir-devel = %{version}-%{release}
+Requires: perl-File-ShareDir = %{version}-%{release}
 
 %description dev
 dev components for the perl-File-ShareDir package.
@@ -50,7 +53,7 @@ license components for the perl-File-ShareDir package.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -60,7 +63,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
