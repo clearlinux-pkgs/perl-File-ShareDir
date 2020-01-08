@@ -4,13 +4,14 @@
 #
 Name     : perl-File-ShareDir
 Version  : 1.116
-Release  : 15
+Release  : 16
 URL      : http://search.cpan.org/CPAN/authors/id/R/RE/REHSACK/File-ShareDir-1.116.tar.gz
 Source0  : http://search.cpan.org/CPAN/authors/id/R/RE/REHSACK/File-ShareDir-1.116.tar.gz
 Summary  : 'Locate per-dist and per-module shared files'
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-File-ShareDir-license = %{version}-%{release}
+Requires: perl-File-ShareDir-perl = %{version}-%{release}
 Requires: perl(Class::Inspector)
 BuildRequires : buildreq-cpan
 BuildRequires : perl(Class::Inspector)
@@ -46,8 +47,18 @@ Group: Default
 license components for the perl-File-ShareDir package.
 
 
+%package perl
+Summary: perl components for the perl-File-ShareDir package.
+Group: Default
+Requires: perl-File-ShareDir = %{version}-%{release}
+
+%description perl
+perl components for the perl-File-ShareDir package.
+
+
 %prep
 %setup -q -n File-ShareDir-1.116
+cd %{_builddir}/File-ShareDir-1.116
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -72,7 +83,7 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-File-ShareDir
-cp LICENSE %{buildroot}/usr/share/package-licenses/perl-File-ShareDir/LICENSE
+cp %{_builddir}/File-ShareDir-1.116/LICENSE %{buildroot}/usr/share/package-licenses/perl-File-ShareDir/1f9320711c50d58e122b9880cee3426956e9dc15
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -85,10 +96,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/File/ShareDir.pm
-/usr/lib/perl5/vendor_perl/5.28.2/auto/share/dist/File-ShareDir/sample.txt
-/usr/lib/perl5/vendor_perl/5.28.2/auto/share/dist/File-ShareDir/subdir/sample.txt
-/usr/lib/perl5/vendor_perl/5.28.2/auto/share/module/File-ShareDir/test_file.txt
 
 %files dev
 %defattr(-,root,root,-)
@@ -96,4 +103,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/perl-File-ShareDir/LICENSE
+/usr/share/package-licenses/perl-File-ShareDir/1f9320711c50d58e122b9880cee3426956e9dc15
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/File/ShareDir.pm
+/usr/lib/perl5/vendor_perl/5.30.1/auto/share/dist/File-ShareDir/sample.txt
+/usr/lib/perl5/vendor_perl/5.30.1/auto/share/dist/File-ShareDir/subdir/sample.txt
+/usr/lib/perl5/vendor_perl/5.30.1/auto/share/module/File-ShareDir/test_file.txt
