@@ -4,7 +4,7 @@
 #
 Name     : perl-File-ShareDir
 Version  : 1.118
-Release  : 19
+Release  : 20
 URL      : https://cpan.metacpan.org/authors/id/R/RE/REHSACK/File-ShareDir-1.118.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RE/REHSACK/File-ShareDir-1.118.tar.gz
 Summary  : 'Locate per-dist and per-module shared files'
@@ -107,7 +107,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/File/ShareDir.pm
-/usr/lib/perl5/vendor_perl/5.30.3/auto/share/dist/File-ShareDir/sample.txt
-/usr/lib/perl5/vendor_perl/5.30.3/auto/share/dist/File-ShareDir/subdir/sample.txt
-/usr/lib/perl5/vendor_perl/5.30.3/auto/share/module/File-ShareDir/test_file.txt
+/usr/lib/perl5/vendor_perl/5.32.1/File/ShareDir.pm
+/usr/lib/perl5/vendor_perl/5.32.1/auto/share/dist/File-ShareDir/sample.txt
+/usr/lib/perl5/vendor_perl/5.32.1/auto/share/dist/File-ShareDir/subdir/sample.txt
+/usr/lib/perl5/vendor_perl/5.32.1/auto/share/module/File-ShareDir/test_file.txt
