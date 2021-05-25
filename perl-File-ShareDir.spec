@@ -4,7 +4,7 @@
 #
 Name     : perl-File-ShareDir
 Version  : 1.118
-Release  : 25
+Release  : 26
 URL      : https://cpan.metacpan.org/authors/id/R/RE/REHSACK/File-ShareDir-1.118.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RE/REHSACK/File-ShareDir-1.118.tar.gz
 Summary  : 'Locate per-dist and per-module shared files'
